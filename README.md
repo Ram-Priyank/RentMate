@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -48,3 +49,7 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+=======
+# RentMate
+RentMate is a mobile rental platform that helps property owners and tenants connect directly without any brokers. Through this app, owners can easily list various types of rental properties such as apartments, independent houses, shops, offices, farmhouses, and villas, by uploading photos, rent details, and location right from their phone. 
+>>>>>>> fb1343e5216f22ccb443b3e6236981dd98f63b21
