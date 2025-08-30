@@ -1,55 +1,125 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+🏠 RentMate – Online Rental Platform
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+RentMate is an online rental platform that connects property owners and tenants (renters) directly without brokers. Owners can list properties (apartments, houses, shops, offices, villas, farmhouses), while renters can search, view details, chat, and book properties online.
 
-## Get started
+The system also includes an Admin Panel for property verification, user management, and complaint handling.
 
-1. Install dependencies
+🚀 Tech Stack
 
-   ```bash
-   npm install
-   ```
+Frontend (Mobile App): React Native (Expo)
 
-2. Start the app
+Backend: Node.js + Express.js
 
-   ```bash
-   npx expo start
-   ```
+Database: MongoDB
 
-In the output, you'll find options to open the app in a
+Authentication: JWT (JSON Web Tokens)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Admin Panel (Web): React.js (or Next.js)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Payments: Razorpay / Stripe / UPI Integration
 
-## Get a fresh project
+Hosting: Vercel / Netlify (frontend), Heroku / Render (backend), MongoDB Atlas
 
-When you're ready, run:
+📌 Features
+👤 Renter Module
 
-```bash
-npm run reset-project
-```
+Register/Login
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Search & filter properties
 
-## Learn more
+View property details
 
-To learn more about developing your project with Expo, look at the following resources:
+Contact owner (chat/inquiry)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Book property & make payments
 
-## Join the community
+Rate property & leave reviews
 
-Join our community of developers creating universal apps.
+🏡 Owner Module
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# RentMate
-RentMate is a mobile rental platform that helps property owners and tenants connect directly without any brokers. Through this app, owners can easily list various types of rental properties such as apartments, independent houses, shops, offices, farmhouses, and villas, by uploading photos, rent details, and location right from their phone. 
->>>>>>> fb1343e5216f22ccb443b3e6236981dd98f63b21
+Register/Login
+
+Upload new property with images & documents
+
+Edit/Delete property
+
+Toggle availability (Available/Rented)
+
+View inquiries from renters
+
+🛡️ Admin Module (Web Panel)
+
+Approve/Reject property listings
+
+Verify owner documents
+
+Manage users (block/unblock)
+
+Handle complaints
+
+Generate reports (users, listings, bookings)
+
+🏗️ Project Structure
+RentMate/
+│── backend/              # Express.js + MongoDB backend
+│   ├── models/           # MongoDB schemas
+│   ├── routes/           # API routes
+│   ├── controllers/      # Business logic
+│   └── server.js         # App entry point
+│
+│── mobile-app/           # React Native (Expo) app
+│   ├── screens/          # Home, Login, Property, Chat, Payments
+│   ├── components/       # UI components
+│   ├── navigation/       # React Navigation setup
+│   └── App.js            # Main entry file
+│
+│── admin-panel/          # React.js (Web Panel for Admins)
+│   ├── pages/            # Dashboard, Users, Properties, Complaints
+│   └── components/       # Sidebar, Charts, Tables
+│
+└── README.md
+
+⚙️ Installation
+1️⃣ Backend (Node + Express)
+cd backend
+npm install
+npm start
+
+2️⃣ Mobile App (React Native + Expo)
+cd mobile-app
+npm install
+npx expo start
+
+
+Scan the QR code with the Expo Go app on your phone.
+
+3️⃣ Admin Panel (React.js)
+cd admin-panel
+npm install
+npm start
+
+📊 Database Schema (MongoDB)
+
+Users: user_id, name, email, password, phone, role, status
+
+Properties: property_id, owner_id, title, description, type, location, price, images, documents, availability
+
+Bookings: booking_id, property_id, renter_id, start_date, end_date, status, payment_status
+
+Payments: payment_id, booking_id, amount, method, status, transaction_id
+
+Chats: chat_id, renter_id, owner_id, message, timestamp
+
+Reviews: review_id, renter_id, property_id, rating, comment
+
+Complaints: complaint_id, user_id, description, status
+
+📌 Future Enhancements
+
+Push notifications for new messages & bookings
+
+AI-based property recommendations
+
+Multi-language support
+
+Tenant verification (KYC with Aadhaar/PAN)
